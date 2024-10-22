@@ -4,10 +4,11 @@ class calculator:
         self.nome = nome
         while True:
             operador = self.menu()
-            if operador != "v" or operador != None:
+            if operador != "v":
                 self.get__numbers()
                 resultado = self.calculate(operador)
-                print(resultado)
+                if resultado:
+                    print(resultado)
             else:
                 print("fechando a calculadora")
                 break
@@ -21,19 +22,19 @@ class calculator:
 
     def menu(self):
 
-            operador = input(f""""
+            operador = input(f"""
 Informe o Operador:
-            (i) soma, 
-            (ii)subtração, 
+            (i) soma
+            (ii)subtração
             (iii)multiplicação 
-            (iv) divisão.
+            (iv) divisão
             (v) Sair                                 
                                   
-                                  """)
+:""")
             return operador
 
 
-    def calculate(self, operador):
+    def calculate(self,operador):
         
         match operador:
             case "i":
@@ -46,7 +47,7 @@ Informe o Operador:
                 return self.num1 / self.num2
             case _:
                 print("operador inválido")
-                return None
+                return False               
             
 
 
