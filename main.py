@@ -2,6 +2,7 @@ class Calculator:
     def __init__(self, nome):
         self.nome = nome
         self.historico = []
+        
 
 
     def calc(self, operador, num1, num2):

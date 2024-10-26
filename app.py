@@ -18,7 +18,7 @@ def menu():
 
 
 def start(Calculator):
-       
+    print("Olá!", Calculator.nome, "Vamos calcular")  
     while True:
         operador = menu()
         if operador == "operador inválido":
@@ -49,4 +49,5 @@ def start(Calculator):
 
 
 user = Calculator(input("Digite o seu nome: "))
+
 start(user)
